@@ -1,21 +1,33 @@
 dependencies:
-  espressif/ssd1306:
-    component_hash: 102cfc05b1b304862fa3f494e9dd955844bcc5f6cb16596e4ca5df3e6bf9fd0d
+  espressif/esp_lvgl_port:
+    component_hash: b6360960f47b6776462e7092861b3ea66477ffb762a01baa0aecbb3d74cd50f4
     dependencies:
     - name: idf
       require: private
-      version: '>=4.0'
+      version: '>=5.1'
+    - name: lvgl/lvgl
+      registry_url: https://components.espressif.com
+      require: public
+      version: '>=8,<10'
     source:
       registry_url: https://components.espressif.com/
       type: service
-    version: 1.0.5~1
+    version: 2.7.2
   idf:
     source:
       type: idf
     version: 5.5.0
+  lvgl/lvgl:
+    component_hash: 184e532558c1c45fefed631f3e235423d22582aafb4630f3e8885c35281a49ae
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 9.5.0
 direct_dependencies:
-- espressif/ssd1306
+- espressif/esp_lvgl_port
 - idf
-manifest_hash: cd7ce8876b6a53c5b1a7939c6f02163a534e8e717f2e206b481d409ab143a44d
+- lvgl/lvgl
+manifest_hash: 50e274090597b2caa1ba05a4b6acf2952f32d9b3c865f3a6bcbe03633eeb6a50
 target: esp32s3
 version: 2.0.0

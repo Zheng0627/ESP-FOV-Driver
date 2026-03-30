@@ -14,4 +14,6 @@ dependencies:
   #   # `public` flag doesn't have an effect dependencies of the `main` component.
   #   # All dependencies of `main` are public by default.
   #   public: true
-  espressif/ssd1306: ^1.0.5~1
+  lvgl/lvgl: ^9.5.0
+  espressif/esp_lvgl_port: ^2.7.2
+
